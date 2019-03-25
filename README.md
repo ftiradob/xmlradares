@@ -1,4 +1,4 @@
-# Ejercicioxmlpokemon
+# Ejercicioxmlradares
 
 1. **Listar información:** Mostrar el nombre de las provincias de las que tenemos información sobre radares.
 2. **Contar información:** Mostrar la cantidad de radares de los que tenemos información.
