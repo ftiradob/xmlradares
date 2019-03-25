@@ -32,6 +32,12 @@ def contarad(doc,carretera):
     print("Cuenta con",len(cuentarad),"radares.")
     print("")
 
+def ejer5(doc,carretera):
+    listalati=doc.xpath("//CARRETERA[DENOMINACION='%s']/RADAR/PUNTO_INICIAL/LATITUD/text()"%(carretera))
+    listalongi=doc.xpath("//CARRETERA[DENOMINACION='%s']/RADAR/PUNTO_INICIAL/LONGITUD/text()"%(carretera))
+    for i in range(len(listalati)):
+        print("http://www.openstreetmap.org/#map=20/%s/%s" %(listalati[i],listalongi[i]))
+        
 print("")
 while True:
     print("1. Mostrar el nombre de las provincias de las que tenemos información sobre radares.")
@@ -59,6 +65,14 @@ while True:
             print("-",i)
         print("")
         contarad(doc,carretera)
+    elif opcion==5:
+        carretera=input("Introduzca una carretera: ")
+        print("")
+        contarad(doc,carretera)
+        print("Sus coordenadas son las siguientes: ")
+        print("")
+        ejer5(doc,carretera)
+        print("")
     elif opcion==0:
         print("Adios")
         break
